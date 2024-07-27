@@ -1,0 +1,1226 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for 91.9 KCSB FM 2024-2025">
+      
+      
+      
+      
+        <link rel="prev" href="../introduction/">
+      
+      
+        <link rel="next" href="../installation/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
+    
+    
+      
+        <title>System Requirements - Omeka-S Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#system-requirements" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Omeka-S Documentation" class="md-header__button md-logo" aria-label="Omeka-S Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Omeka-S Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              System Requirements
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Omeka-S Documentation" class="md-nav__button md-logo" aria-label="Omeka-S Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Omeka-S Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    System Requirements
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    System Requirements
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php" class="md-nav__link">
+    <span class="md-ellipsis">
+      PHP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Software
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omeka-s-and-lamp-stack-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Omeka S and LAMP Stack Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Omeka S and LAMP Stack Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-elementary-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install Elementary OS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-install-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Install Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-install-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Install MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-install-php-and-required-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Install PHP and Required Extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-install-composer-and-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Install Composer and Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-install-omeka-s" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Install Omeka S
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-set-file-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Set File Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-install-omeka-s-dependencies-with-composer" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Install Omeka S Dependencies with Composer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-create-a-host-config-for-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Create a Host Config for Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-enable-the-virtual-host-and-restart-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Enable the Virtual Host and Restart Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-finalize-omeka-s-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Finalize Omeka S Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide.md#accessing-the-website" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing the Website
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide.md#user-roles-and-permissions" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Roles and Permissions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide.md#creating-and-managing-content" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating and Managing Content
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide.md#plugins-and-themes" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plugins and Themes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maintenance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maintenance and Troubleshooting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendices.md#glossary" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendices.md#additional-resources" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Additional Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php" class="md-nav__link">
+    <span class="md-ellipsis">
+      PHP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Software
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omeka-s-and-lamp-stack-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Omeka S and LAMP Stack Dependencies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Omeka S and LAMP Stack Dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-install-elementary-os" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Install Elementary OS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-install-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Install Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-install-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Install MySQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-install-php-and-required-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Install PHP and Required Extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-install-composer-and-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Install Composer and Git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-install-omeka-s" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Install Omeka S
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-set-file-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Set File Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-install-omeka-s-dependencies-with-composer" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Install Omeka S Dependencies with Composer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-create-a-host-config-for-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Create a Host Config for Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-enable-the-virtual-host-and-restart-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Enable the Virtual Host and Restart Apache
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-finalize-omeka-s-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Finalize Omeka S Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="system-requirements">System Requirements</h1>
+<p>To ensure the Omeka S platform operates efficiently at 91.9 KCSB FM, it is essential to meet the following system requirements. These requirements cover both the server environment and required software dependencies.</p>
+<h2 id="server-requirements">Server Requirements</h2>
+<p><strong>Operating System:</strong>
+- Elementary OS (documentation)</p>
+<p><strong>Hardware:</strong></p>
+<ul>
+<li><strong>Processor:</strong> Ideally 1 GHz or faster</li>
+<li><strong>Memory:</strong> 2 GB RAM MINIMUM (4+ GB recommended)</li>
+<li><strong>Storage:</strong> 20GB+ Disk Space</li>
+<li><strong>Network:</strong> Reliable internet connection</li>
+</ul>
+<h2 id="software-dependencies">Software Dependencies</h2>
+<p>Omeka S is run with a LAMP stack backend architecture. The software requirements are detailed below:</p>
+<h3 id="linux">Linux</h3>
+<ul>
+<li><strong>Elementary OS (Ubuntu):</strong> Ensure that your system is up-to-date to avoid security vulnerabilities and compatibility issues.</li>
+</ul>
+<h3 id="apache">Apache</h3>
+<ul>
+<li><strong>Apache HTTP Server 2.4 or higher</strong></li>
+<li>Ensure <code>mod_rewrite</code> is enabled</li>
+</ul>
+<h3 id="mysql">MySQL</h3>
+<ul>
+<li><strong>MySQL 5.7 or higher or MariaDB 10.1 or higher</strong></li>
+<li>Recommended: InnoDB storage engine for tables to increase efficiency and provide foreign key support</li>
+<li>Must be configured to handle UTF-8 encoding:
+    <code>sql
+    ALTER DATABASE your_database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;</code></li>
+<li>MySQL default collation/character set is generally <code>utf8mb4</code> and <code>utf8mb4_0900_ai_ci</code>, but double-check to ensure.</li>
+</ul>
+<h3 id="php">PHP</h3>
+<ul>
+<li><strong>PHP 7.4 or higher</strong></li>
+<li>Required PHP extensions: <code>PDO</code>, <code>pdo_mysql</code>, <code>mysqli</code>, <code>json</code>, <code>mbstring</code>, <code>xml</code>, <code>dom</code>, <code>simplexml</code>, <code>fileinfo</code>, <code>curl</code>, <code>gd</code></li>
+<li>Install required PHP extensions:
+    <code>sh
+    sudo apt install php libapache2-mod-php php-mysql php-json php-mbstring php-xml php-dom php-simplexml php-fileinfo php-curl php-gd</code></li>
+</ul>
+<h3 id="additional-software">Additional Software</h3>
+<ul>
+<li><strong>Composer</strong> (for PHP dependencies)</li>
+<li><strong>Git</strong> (for version control)</li>
+<li><strong>SSL Certificate</strong></li>
+</ul>
+<h2 id="omeka-s-and-lamp-stack-dependencies">Omeka S and LAMP Stack Dependencies</h2>
+<p>Running Omeka S on a LAMP backend architecture involves several steps, including installing and configuring each component of the stack and then installing Omeka S itself.</p>
+<h3 id="1-install-elementary-os">1. Install Elementary OS</h3>
+<ul>
+<li>Install Elementary OS from the official website and follow the installation instructions.</li>
+</ul>
+<h3 id="2-install-apache">2. Install Apache</h3>
+<ul>
+<li>
+<p>Install Apache HTTP Server:
+  <code>sh
+  sudo apt update
+  sudo apt install apache2</code></p>
+</li>
+<li>
+<p>Enable <code>mod_rewrite</code>:
+  <code>sh
+  sudo a2enmod rewrite
+  sudo systemctl restart apache2</code></p>
+</li>
+<li>
+<p><strong>Verification:</strong> Open a web browser and navigate to <code>http://localhost</code>. This will prompt the Apache2 default welcome page.</p>
+</li>
+</ul>
+<h3 id="3-install-mysql">3. Install MySQL</h3>
+<ul>
+<li>
+<p>Install MySQL Server:
+  <code>sh
+  sudo apt install mysql-server
+  sudo mysql_secure_installation</code></p>
+</li>
+<li>
+<p>Secure MySQL Installation:
+  <code>sh
+  sudo mysql -u root -p</code></p>
+</li>
+<li>
+<p>Create a database and a user for Omeka-S:
+  <code>sql
+  CREATE DATABASE omeka_s;
+  CREATE USER 'omeka_user'@'localhost' IDENTIFIED BY 'password';
+  GRANT ALL PRIVILEGES ON omeka_s.* TO 'omeka_user'@'localhost';
+  FLUSH PRIVILEGES;
+  EXIT;</code></p>
+</li>
+<li>
+<p><strong>Verification:</strong> Log into MySQL and check the databases:
+  <code>sh
+  sudo mysql -u root -p
+  SHOW DATABASES;</code>
+  Ensure the Omeka-S database is listed.</p>
+</li>
+</ul>
+<h3 id="4-install-php-and-required-extensions">4. Install PHP and Required Extensions</h3>
+<ul>
+<li>
+<p>Install PHP and required extensions:
+  <code>sh
+  sudo apt install php libapache2-mod-php php-mysql php-json php-mbstring php-xml php-dom php-simplexml php-fileinfo php-curl php-gd</code></p>
+</li>
+<li>
+<p><strong>Verification:</strong> Create a PHP File to verify installation:
+  <code>sh
+  echo "&lt;?php phpinfo(); ?&gt;" | sudo tee /var/www/html/info.php</code>
+  Navigate to <code>http://localhost/info.php</code>, where the PHP information page will be visible.</p>
+</li>
+</ul>
+<h3 id="5-install-composer-and-git">5. Install Composer and Git</h3>
+<ul>
+<li>
+<p>Install Composer and Git:
+  <code>sh
+  sudo apt install composer
+  sudo apt install git</code></p>
+</li>
+<li>
+<p><strong>Version Control Verification:</strong>
+  <code>sh
+  composer --version
+  git --version</code></p>
+</li>
+</ul>
+<h3 id="6-install-omeka-s">6. Install Omeka S</h3>
+<ul>
+<li>Navigate to the web root and clone the Omeka S repository:
+  <code>sh
+  cd /var/www/html
+  sudo git clone https://github.com/omeka/omeka-s.git</code></li>
+</ul>
+<h3 id="7-set-file-permissions">7. Set File Permissions</h3>
+<ul>
+<li>Set the correct file permissions:
+  <code>sh
+  sudo chown -R www-data:www-data /var/www/html/omeka-s
+  sudo chmod -R 755 /var/www/html/omeka-s</code></li>
+</ul>
+<h3 id="8-install-omeka-s-dependencies-with-composer">8. Install Omeka S Dependencies with Composer</h3>
+<ul>
+<li>Install dependencies:
+  <code>sh
+  cd omeka-s
+  sudo composer install</code></li>
+</ul>
+<h3 id="9-create-a-host-config-for-apache">9. Create a Host Config for Apache</h3>
+<ul>
+<li>
+<p>Create a new virtual host configuration:
+  <code>sh
+  sudo nano /etc/apache2/sites-available/omeka-s.conf</code></p>
+</li>
+<li>
+<p>Add the following content to the config file:
+  ```apache
+  <VirtualHost *:80>
+      ServerAdmin webmaster@localhost
+      DocumentRoot /var/www/html/omeka-s</p>
+<p><Directory /var/www/html/omeka-s>
+      Options Indexes FollowSymLinks
+      AllowOverride All
+      Require all granted
+  </Directory></p>
+<p>ErrorLog ${APACHE_LOG_DIR}/error.log
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
+  </VirtualHost>
+  ```</p>
+</li>
+</ul>
+<h3 id="10-enable-the-virtual-host-and-restart-apache">10. Enable the Virtual Host and Restart Apache</h3>
+<ul>
+<li>Enable the virtual host and restart Apache:
+  <code>sh
+  sudo a2ensite omeka-s.conf
+  sudo systemctl restart apache2</code></li>
+</ul>
+<h3 id="11-finalize-omeka-s-installation">11. Finalize Omeka S Installation</h3>
+<ul>
+<li>Open a web browser and navigate to <code>http://your-server-ip/omeka-s</code></li>
+<li>Follow the on-screen instructions to complete the Omeka S setup, entering the database information created earlier.</li>
+</ul>
+<p>By following these steps and meeting the system requirements, Omeka S will be effectively installed and configured on a LAMP stack, providing a robust platform for managing and sharing digital collections at 91.9 KCSB FM.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
