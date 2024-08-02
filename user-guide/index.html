@@ -125,6 +125,14 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#modules-and-extensions" class="nav-link">Modules and Extensions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#themes" class="nav-link">Themes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -165,7 +173,17 @@
 <li><strong>Reviewer:</strong> View items and provide feedback but cannot make changes.</li>
 <li><strong>Researcher:</strong> Access public and private items for research purposes.</li>
 </ul>
-<h3 id="common-administrative-tasks">Common Administrative Tasks</h3>
+<h3 id="creating-and-managing-content">Creating and Managing Content</h3>
+<p>As indicated before, The content in Omeka S is organized into <strong>Items</strong>, <strong>Item Sets</strong>, and <strong>Media</strong>. This section explains how to create and manage these content types efficiently. There are also parameters to manage <strong>Users</strong>, which this section will review in depth. </p>
+<p>A critical part of the KCSB content management workflow is the CSV upload module. Procedures and best practices will also be reviewed in this section. </p>
+<h3 id="adding-items">Adding Items</h3>
+<ol>
+<li><strong>Navigate to the "Items" Section:</strong> Access this section from the navigation menu on the left.</li>
+<li><strong>Click "Add New Item":</strong> This opens the item creation form.</li>
+<li><strong>Enter Item Details:</strong> Fill in fields such as title, description, and metadata.</li>
+<li><strong>Attach Media Files:</strong> Upload associated files like images, audio, and video.</li>
+<li><strong>Save the Item:</strong> Click "Save" to add the item to your collection.</li>
+</ol>
 <h4 id="adding-a-new-item">Adding a New Item</h4>
 <ol>
 <li>Navigate to the "Items" section.</li>
@@ -173,13 +191,21 @@
 <li>Enter item details, such as title, description, and associated media.</li>
 <li>Save the item.</li>
 </ol>
-<h4 id="creating-an-item-set">Creating an Item Set</h4>
+<h3 id="creating-item-sets">Creating Item Sets</h3>
+<p>Item Sets are groups of related items. They help organize collections.</p>
 <ol>
-<li>Go to the "Item Sets" section.</li>
-<li>Click "Add New Item Set."</li>
-<li>Provide a title and description for the set.</li>
-<li>Add items to the set as needed.</li>
-<li>Save the item set.</li>
+<li><strong>Go to "Item Sets":</strong> Access this section via the navigation menu.</li>
+<li><strong>Click "Add New Item Set":</strong> This opens the item set creation form.</li>
+<li><strong>Enter Set Details:</strong> Provide a title, description, and any relevant metadata.</li>
+<li><strong>Add Items to the Set:</strong> Select items to include in the set.</li>
+<li><strong>Save the Item Set:</strong> Click "Save" to create the item set.</li>
+</ol>
+<h3 id="managing-media">Managing Media</h3>
+<p>Media management is critical for associating files with items.</p>
+<ol>
+<li><strong>Upload Media Files:</strong> Access the "Media" section and click "Add New Media."</li>
+<li><strong>Select Files to Upload:</strong> Choose files from your computer or provide a URL for external media.</li>
+<li><strong>Link Media to Items:</strong> Assign media to items, specifying their role (e.g., image, audio).</li>
 </ol>
 <h4 id="managing-users">Managing Users</h4>
 <ol>
@@ -188,15 +214,73 @@
 <li>Assign a role and set permissions for the user.</li>
 <li>Save the user account.</li>
 </ol>
-<h3 id="modules-and-extensions">Modules and Extensions</h3>
+<h3 id="csv-upload">CSV Upload</h3>
+<p>CSV upload is a powerful feature for importing multiple items with metadata simultaneously.</p>
+<h4 id="prepare-your-csv-file">Prepare Your CSV File:</h4>
+<ul>
+<li><strong>Format:</strong> Ensure your CSV file is formatted correctly, with column headers matching Omeka S metadata fields (e.g., title, description, creator).</li>
+<li><strong>Include Media URLs:</strong> This has not been something I've been able to figure out, as there's a roadblock with linking URLs from Google Drive. However, if you find a way around it, please change my documentation so future archivists don't have to manually upload files. </li>
+</ul>
+<h4 id="kcsb-spreadsheet-template">KCSB Spreadsheet Template:</h4>
+<ul>
+<li>A template for preparing your CSV file is available to assist you. The KCSB Spreadsheet can be found <a href="https://docs.google.com/spreadsheets/d/1MOXkm5SRqjtfC2neQVebXPRcSTAMlcT3/edit?usp=sharing&amp;ouid=107537356243937470846&amp;rtpof=true&amp;sd=true">here</a>.</li>
+</ul>
+<h4 id="navigate-to-csv-import">Navigate to CSV Import:</h4>
+<ul>
+<li>Access the "CSV Import" module from the admin dashboard.</li>
+<li>Click "Import CSV" to begin the upload process.</li>
+</ul>
+<h4 id="upload-the-csv-file">Upload the CSV File:</h4>
+<ul>
+<li><strong>Select File:</strong> Choose the CSV file from your computer.</li>
+<li><strong>Configure Mapping:</strong> Map CSV columns to Omeka S fields. Ensure each column is correctly matched to a metadata field.</li>
+</ul>
+<h4 id="review-and-confirm">Review and Confirm:</h4>
+<ul>
+<li><strong>Preview:</strong> Check the preview to ensure data is correctly mapped.</li>
+<li><strong>Import:</strong> Click "Import" to add items to the collection. Monitor the import progress.</li>
+</ul>
+<h4 id="verify-import">Verify Import:</h4>
+<ul>
+<li><strong>Check Items:</strong> Ensure all items have been imported correctly.</li>
+<li><strong>Review Media:</strong> Verify that media files are associated with the correct items.</li>
+</ul>
+<h2 id="modules-and-extensions">Modules and Extensions</h2>
 <p>Omeka S allows for the integration of modules that extend the platform’s functionality. Common modules include:</p>
 <ul>
 <li><strong>CSV Import:</strong> Import items and metadata from CSV files.</li>
 <li><strong>Search:</strong> Enhance search capabilities for users.</li>
 <li><strong>Mapping:</strong> Display items on geographical maps.</li>
+<li><strong>Contact Us</strong> Adds a contact form to front-end site</li>
 </ul>
-<h3 id="theme-customization">Theme Customization</h3>
-<p>Customize the appearance of your site using available themes or create a custom theme to match your branding needs.</p>
+<h4 id="contact-us-module">Contact Us Module</h4>
+<p>The Contact Us module adds a contact form to your site, allowing visitors to get in touch easily. For more information, refer to Omeka's <a href="https://omeka.org/s/modules/ContactUs/#:~:text=Contact%20Us%20is%20a%20module,directly%20in%20the%20interface%20too.">technical documentation</a></p>
+<ul>
+<li><strong>Download and Install:</strong> Obtain the module from the Omeka S repository and install it via the admin dashboard.</li>
+<li><strong>Configure Settings:</strong> Set up email addresses and form fields according to your needs.</li>
+</ul>
+<h4 id="add-contact-us-page">Add Contact Us Page:</h4>
+<ul>
+<li><strong>Navigate to Pages:</strong> Access the "Pages" section from the dashboard.</li>
+<li>
+<p><strong>Create New Page:</strong> Click "Add New Page" and select the Contact Us layout.</p>
+</li>
+<li>
+<p><strong>Customize Form:</strong> Adjust form fields and settings as needed.</p>
+</li>
+<li>
+<p><strong>Publish Page:</strong> Click "Save" to publish the Contact Us page.</p>
+</li>
+<li><strong>Verify:</strong> Test the form to ensure it functions correctly and that messages are received. Ours is already functioning, but feel free to remove and redownload using the above steps if anything ever goes wrong with module ops. </li>
+</ul>
+<h2 id="themes">Themes</h2>
+<p>Themes control the visual appearance of your Omeka S site. They can be customized to align with your branding and design preferences.</p>
+<h4 id="changing-themes">Changing Themes</h4>
+<ol>
+<li><strong>Navigate to "Themes":</strong> Access this section from the admin dashboard.</li>
+<li><strong>Select a Theme:</strong> Choose from available themes or upload a custom theme.</li>
+<li><strong>Activate Theme:</strong> Click "Activate" to apply the theme to your site.</li>
+</ol>
 <h3 id="backup-and-security">Backup and Security</h3>
 <ul>
 <li>Regularly back up your database and files to prevent data loss.</li>
