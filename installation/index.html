@@ -1,154 +1,140 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Installation - Omeka-S Documentation</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
-    
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Installation";
-        var mkdocs_page_input_path = "installation.md";
-        var mkdocs_page_url = null;
-      </script>
-    
-    <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Omeka-S Documentation
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../system-requirements/">System Requirements</a>
-                </li>
-              </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Installation</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-install-elementary-os">1. Install Elementary OS</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-install-apache">2. Install Apache</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-configure-firewall">3. Configure Firewall</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-install-mysql">4. Install MySQL</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#5-install-php-and-required-extensions">5. Install PHP and Required Extensions</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#6-advanced-php-configuration">6. Advanced PHP Configuration</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#7-install-composer-and-git">7. Install Composer and Git</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#8-install-omeka-s">8. Install Omeka S</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#9-set-file-permissions">9. Set File Permissions</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#10-install-omeka-s-dependencies-with-composer">10. Install Omeka S Dependencies with Composer</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#11-create-a-host-config-for-apache">11. Create a Host Config for Apache</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#12-enable-the-virtual-host-and-restart-apache">12. Enable the Virtual Host and Restart Apache</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#13-finalize-omeka-s-installation">13. Finalize Omeka S Installation</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#14-enable-https-optional">14. Enable HTTPS (Optional)</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#15-optimize-mysql-configuration">15. Optimize MySQL Configuration</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#16-enable-error-logging-for-debugging">16. Enable Error Logging for Debugging</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#17-set-up-cron-jobs-for-maintenance-optional">17. Set Up Cron Jobs for Maintenance (Optional)</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#18-security-considerations">18. Security Considerations</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#19-backup-procedures">19. Backup Procedures</a>
-    </li>
-    </ul>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">User Guide</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="../user-guide.md#accessing-the-website">Accessing the Website</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../user-guide.md#user-roles-and-permissions">User Roles and Permissions</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../user-guide.md#creating-and-managing-content">Creating and Managing Content</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../user-guide.md#plugins-and-themes">Plugins and Themes</a>
-                  </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../maintenance/">Maintenance and Troubleshooting</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Appendices</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="" href="../appendices.md#glossary">Glossary</a>
-                  </li>
-                  <li class="toctree-l1"><a class="" href="../appendices.md#additional-resources">Additional Resources</a>
-                  </li>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Omeka-S Documentation</a>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Installation</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h2 id="omeka-s-and-lamp-stack-dependencies">Omeka S and LAMP Stack Dependencies</h2>
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Installation - Omeka-S Documentation</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Omeka-S Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../introduction/" class="nav-link">Introduction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../system-requirements/" class="nav-link">System Requirements</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Installation</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../configuration/" class="nav-link">Configuration</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">User Guide</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../user-guide.md#accessing-the-website" class="dropdown-item">Accessing the Website</a>
+</li>
+                                    
+<li>
+    <a href="../user-guide.md#user-roles-and-permissions" class="dropdown-item">User Roles and Permissions</a>
+</li>
+                                    
+<li>
+    <a href="../user-guide.md#creating-and-managing-content" class="dropdown-item">Creating and Managing Content</a>
+</li>
+                                    
+<li>
+    <a href="../user-guide.md#plugins-and-themes" class="dropdown-item">Plugins and Themes</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../maintenance/" class="nav-link">Maintenance and Troubleshooting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../faq/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Appendices</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../appendices.md#glossary" class="dropdown-item">Glossary</a>
+</li>
+                                    
+<li>
+    <a href="../appendices.md#additional-resources" class="dropdown-item">Additional Resources</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../system-requirements/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../configuration/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#omeka-s-and-lamp-stack-dependencies" class="nav-link">Omeka S and LAMP Stack Dependencies</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="omeka-s-and-lamp-stack-dependencies">Omeka S and LAMP Stack Dependencies</h2>
 <p>Running Omeka S on a LAMP backend architecture involves several steps, including installing and configuring each component of the stack and then installing Omeka S itself.</p>
 <h3 id="1-install-elementary-os">1. Install Elementary OS</h3>
 <ul>
@@ -367,52 +353,82 @@
   <code>sh
   mysqldump -u omeka_user -p omeka_s &gt; /path/to/backup/omeka_s_backup.sql</code></li>
 </ul>
-<p>By following these steps and meeting the system requirements, Omeka S will be effectively installed and configured on a LAMP stack, providing a robust platform for managing and sharing digital collections at 91.9 KCSB FM.</p>
-              
+<p>By following these steps and meeting the system requirements, Omeka S will be effectively installed and configured on a LAMP stack, providing a robust platform for managing and sharing digital collections at 91.9 KCSB FM.</p></div>
             </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../system-requirements/" class="btn btn-neutral float-left" title="System Requirements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../configuration/" class="btn btn-neutral float-right" title="Configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-          
         </div>
-      </div>
 
-    </section>
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href="../system-requirements/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
 </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "..";</script>
-    <script src="../js/theme_extra.js"></script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/main.js"></script>
-    <script>
-        jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        });
-    </script>
 
-</body>
+    </body>
 </html>
