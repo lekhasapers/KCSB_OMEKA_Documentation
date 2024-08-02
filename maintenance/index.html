@@ -105,6 +105,19 @@
             </li>
               </ul>
             </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#backing-up-omeka-s" class="nav-link">Backing Up Omeka S</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#overview" class="nav-link">Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -149,7 +162,123 @@
 <p>Enable automatic updates:</p>
 <pre><code class="language-sh">sudo dpkg-reconfigure --priority=low unattended-upgrades
 </code></pre>
-<p>By following these guidelines, KCSB’s Omeka LAMP stack will remain up to date and secure, minimizing the risk of deprecation and ensuring continued compatibility with Omeka S.</p></div>
+<p>By following these guidelines, KCSB’s Omeka LAMP stack will remain up to date and secure, minimizing the risk of deprecation and ensuring continued compatibility with Omeka S.</p>
+<hr />
+<h1 id="backing-up-omeka-s">Backing Up Omeka S</h1>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>Backing up Omeka S involves two main components:
+1. <strong>Omeka S Files</strong>: This includes the application files, configuration files, themes, plugins, and uploaded files.
+2. <strong>Database</strong>: Omeka S uses a database (typically MySQL) to store all metadata, settings, and relationships.</p>
+<p>Both components must be backed up regularly to ensure a complete and restorable backup.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Access to the server where Omeka S is installed.</li>
+<li>Administrative privileges to access files and databases.</li>
+<li>Basic knowledge of command-line operations</li>
+</ul>
+<h3 id="step-1-backing-up-omeka-s-files">Step 1: Backing Up Omeka S Files</h3>
+<h4 id="manual-backup">Manual Backup</h4>
+<ol>
+<li><strong>Connect to Your Server</strong>: Use SSH to connect to your server. I've been using 'archives@128.111.126.136', but I'm not sure if you're on the same computer, so you may have to set that up on your own. </li>
+</ol>
+<p><code>sh
+   ssh username@your-server-ip</code></p>
+<ol>
+<li><strong>Navigate to the Omeka S Directory</strong>: Locate the directory where Omeka S is installed.</li>
+</ol>
+<p><code>sh
+   cd /var/www/html/omeka-s</code></p>
+<ol>
+<li><strong>Create a Compressed Archive</strong>: Use the <code>tar</code> command to create a compressed archive of the Omeka S directory.</li>
+</ol>
+<p><code>sh
+   tar -czvf omeka-s-backup-$(date +%F).tar.gz .</code></p>
+<p>This command creates a tar.gz file named with the current date.</p>
+<ol>
+<li><strong>Move the Backup File</strong>: Move the backup file to a safe location.</li>
+</ol>
+<p><code>sh
+   mv omeka-s-backup-$(date +%F).tar.gz /path/to/backup/location</code></p>
+<h4 id="automated-backup-using-a-cron-job">Automated Backup (Using a Cron Job)</h4>
+<ol>
+<li><strong>Create a Backup Script</strong>: Create a shell script to automate the backup process.</li>
+</ol>
+<p><code>sh
+   nano backup-omeka-s.sh</code></p>
+<p>Add the following content to the script:</p>
+<p><code>sh
+   #!/bin/bash
+   BACKUP_DIR="/path/to/backup/location"
+   OMEKA_DIR="/path/to/omeka-s"
+   TIMESTAMP=$(date +%F)
+   tar -czvf $BACKUP_DIR/omeka-s-backup-$TIMESTAMP.tar.gz -C $OMEKA_DIR .</code></p>
+<p>Save and close the file.</p>
+<ol>
+<li><strong>Make the Script Executable</strong>:</li>
+</ol>
+<p><code>sh
+   chmod +x backup-omeka-s.sh</code></p>
+<ol>
+<li><strong>Create a Cron Job</strong>: Open the crontab editor.</li>
+</ol>
+<p><code>sh
+   crontab -e</code></p>
+<p>Add the following line to schedule the backup script to run daily at midnight:</p>
+<p><code>sh
+   0 0 * * * /path/to/backup-omeka-s.sh</code></p>
+<h3 id="step-2-backing-up-the-database">Step 2: Backing Up the Database</h3>
+<h4 id="manual-backup_1">Manual Backup</h4>
+<ol>
+<li><strong>Dump the Database</strong>: Use the <code>mysqldump</code> command to create a backup of the Omeka S database.</li>
+</ol>
+<p><code>sh
+   mysqldump -u username -p omeka_database &gt; omeka-db-backup-$(date +%F).sql</code></p>
+<p>Enter your MySQL password when prompted.</p>
+<ol>
+<li><strong>Move the Backup File</strong>: Move the SQL file to a safe location.</li>
+</ol>
+<p><code>sh
+   mv omeka-db-backup-$(date +%F).sql /path/to/backup/location</code></p>
+<h4 id="automated-backup-using-a-cron-job_1">Automated Backup (Using a Cron Job)</h4>
+<ol>
+<li><strong>Create a Database Backup Script</strong>: Create a shell script to automate the database backup process.</li>
+</ol>
+<p><code>sh
+   nano backup-omeka-db.sh</code></p>
+<p>Add the following content to the script:</p>
+<p><code>sh
+   #!/bin/bash
+   BACKUP_DIR="/path/to/backup/location"
+   DB_USER="username"
+   DB_PASS="password"
+   DB_NAME="omeka_database"
+   TIMESTAMP=$(date +%F)
+   mysqldump -u $DB_USER -p$DB_PASS $DB_NAME &gt; $BACKUP_DIR/omeka-db-backup-$TIMESTAMP.sql</code></p>
+<p>Save and close the file.</p>
+<ol>
+<li><strong>Make the Script Executable</strong>:</li>
+</ol>
+<p><code>sh
+   chmod +x backup-omeka-db.sh</code></p>
+<ol>
+<li><strong>Create a Cron Job</strong>: Open the crontab editor.</li>
+</ol>
+<p><code>sh
+   crontab -e</code></p>
+<p>Add the following line to schedule the database backup script to run daily at 1 AM:</p>
+<p><code>sh
+   0 1 * * * /path/to/backup-omeka-db.sh</code></p>
+<h3 id="step-3-verifying-backups">Step 3: Verifying Backups</h3>
+<ol>
+<li><strong>List Backup Files</strong>: Check the backup location to ensure the files are created.</li>
+</ol>
+<p><code>sh
+   ls /path/to/backup/location</code></p>
+<ol>
+<li><strong>Test Restoration</strong>: Periodically test the restoration process to ensure backups are valid and complete.</li>
+</ol>
+<p>Regularly backing up your Omeka S installation is critical for data integrity and disaster recovery. By following the steps outlined in this documentation, you can ensure that both your files and database are safely backed up and can be restored if needed.</p></div>
             </div>
         </div>
 

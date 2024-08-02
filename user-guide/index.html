@@ -103,10 +103,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#accessing-the-administrative-back-end" class="nav-link">Accessing the Administrative Back-End</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-bs-level="2"><a href="#modules-and-extensions" class="nav-link">Modules and Extensions</a>
               <ul class="nav flex-column">
               </ul>
@@ -124,18 +120,19 @@
 
 <h1 id="user-guide">User Guide</h1>
 <p>This section provides guidance on accessing and using the Omeka S website.</p>
+<hr />
 <h2 id="accessing-the-website">Accessing the Website</h2>
 <p>To access the Omeka S website, visit <a href="http://archives.kcsb.org">archives.kcsb.org</a>.</p>
-<h2 id="accessing-the-administrative-back-end">Accessing the Administrative Back-End</h2>
+<h4 id="accessing-the-administrative-back-end">Accessing the Administrative Back-End</h4>
 <p>The Omeka S administrative back-end is designed for managing collections, configuring settings, and overseeing the content displayed on your website. Here’s how to access and navigate the admin dashboard:</p>
-<h3 id="visit-the-admin-dashboard">Visit the Admin Dashboard</h3>
+<h4 id="visit-the-admin-dashboard">Visit the Admin Dashboard</h4>
 <p>Go to <a href="http://archives.kcsb.org/admin">archives.kcsb.org/admin</a>. You will be prompted to log in with your administrative credentials.</p>
-<h3 id="login-credentials">Login Credentials</h3>
+<h4 id="login-credentials">Login Credentials</h4>
 <p>You will be prompted to log in with your administrative credentials.  </p>
 <p>Enter your username and password to access the admin dashboard. If you have forgotten your password, use the "Forgot Password" link to reset it.</p>
-<h3 id="admin-dashboard-overview">Admin Dashboard Overview</h3>
+<h4 id="admin-dashboard-overview">Admin Dashboard Overview</h4>
 <p>Once logged in, you will be taken to the main dashboard, which provides a quick overview of the site’s activity and shortcuts to frequently used features.</p>
-<h3 id="navigation-menu">Navigation Menu</h3>
+<h4 id="navigation-menu">Navigation Menu</h4>
 <p>The navigation menu on the left side of the dashboard allows you to access different sections:</p>
 <ul>
 <li><strong>Items:</strong> Manage digital items in your collection, including adding, editing, and deleting items.</li>
@@ -146,7 +143,7 @@
 <li><strong>Modules:</strong> Add functionality to your Omeka S installation through various modules and plugins.</li>
 <li><strong>Settings:</strong> Configure site-wide settings such as themes, languages, and API settings.</li>
 </ul>
-<h3 id="user-roles-and-permissions">User Roles and Permissions</h3>
+<h4 id="user-roles-and-permissions">User Roles and Permissions</h4>
 <p>Omeka S supports multiple user roles, each with specific permissions:</p>
 <ul>
 <li><strong>Global Administrator:</strong> Full access to all settings and content management features. This category will generally include the Engineer, Assistant Engineer, and the Archives Coordinator</li>
@@ -156,10 +153,10 @@
 <li><strong>Author</strong>  Can create their own content. This category will generally include beginner Archives volunteers.</li>
 <li><strong>Researcher:</strong> Access public and private items for research purposes. This category will include the general public. </li>
 </ul>
+<hr />
 <h3 id="creating-and-managing-content">Creating and Managing Content</h3>
 <p>As indicated before, The content in Omeka S is organized into <strong>Items</strong>, <strong>Item Sets</strong>, and <strong>Media</strong>. This section explains how to create and manage these content types efficiently. There are also parameters to manage <strong>Users</strong>, which this section will review in depth. </p>
-<p>A critical part of the KCSB content management workflow is the CSV upload module. Procedures and best practices will also be reviewed in this section. </p>
-<h3 id="adding-items">Adding Items</h3>
+<h4 id="adding-items">Adding Items</h4>
 <ol>
 <li><strong>Navigate to the "Items" Section:</strong> Access this section from the navigation menu on the left.</li>
 <li><strong>Click "Add New Item":</strong> This opens the item creation form.</li>
@@ -174,7 +171,7 @@
 <li>Enter item details, such as title, description, and associated media.</li>
 <li>Save the item.</li>
 </ol>
-<h3 id="creating-item-sets">Creating Item Sets</h3>
+<h4 id="creating-item-sets">Creating Item Sets</h4>
 <p>Item Sets are groups of related items. They help organize collections.</p>
 <ol>
 <li><strong>Go to "Item Sets":</strong> Access this section via the navigation menu.</li>
@@ -183,7 +180,7 @@
 <li><strong>Add Items to the Set:</strong> Select items to include in the set.</li>
 <li><strong>Save the Item Set:</strong> Click "Save" to create the item set.</li>
 </ol>
-<h3 id="managing-media">Managing Media</h3>
+<h4 id="managing-media">Managing Media</h4>
 <p>Media management is critical for associating files with items.</p>
 <ol>
 <li><strong>Upload Media Files:</strong> Access the "Media" section and click "Add New Media."</li>
@@ -197,16 +194,17 @@
 <li>Assign a role and set permissions for the user.</li>
 <li>Save the user account.</li>
 </ol>
+<hr />
 <h3 id="csv-upload">CSV Upload</h3>
-<p>CSV upload is a powerful feature for importing multiple items with metadata simultaneously.</p>
+<p>A critical part of the KCSB content management workflow is the CSV upload module. Procedures and best practices will also be reviewed in this section. </p>
+<h4 id="kcsb-spreadsheet-template">KCSB Spreadsheet Template:</h4>
+<ul>
+<li>A template for preparing your CSV file is available to assist you. The KCSB Spreadsheet can be found <a href="https://docs.google.com/spreadsheets/d/1MOXkm5SRqjtfC2neQVebXPRcSTAMlcT3/edit?usp=sharing&amp;ouid=107537356243937470846&amp;rtpof=true&amp;sd=true">here</a>.</li>
+</ul>
 <h4 id="prepare-your-csv-file">Prepare Your CSV File:</h4>
 <ul>
 <li><strong>Format:</strong> Ensure your CSV file is formatted correctly, with column headers matching Omeka S metadata fields (e.g., title, description, creator).</li>
 <li><strong>Include Media URLs:</strong> This has not been something I've been able to figure out, as there's a roadblock with linking URLs from Google Drive. However, if you find a way around it, please change my documentation so future archivists don't have to manually upload files. </li>
-</ul>
-<h4 id="kcsb-spreadsheet-template">KCSB Spreadsheet Template:</h4>
-<ul>
-<li>A template for preparing your CSV file is available to assist you. The KCSB Spreadsheet can be found <a href="https://docs.google.com/spreadsheets/d/1MOXkm5SRqjtfC2neQVebXPRcSTAMlcT3/edit?usp=sharing&amp;ouid=107537356243937470846&amp;rtpof=true&amp;sd=true">here</a>.</li>
 </ul>
 <h4 id="navigate-to-csv-import">Navigate to CSV Import:</h4>
 <ul>
@@ -228,6 +226,7 @@
 <li><strong>Check Items:</strong> Ensure all items have been imported correctly.</li>
 <li><strong>Review Media:</strong> Verify that media files are associated with the correct items.</li>
 </ul>
+<hr />
 <h2 id="modules-and-extensions">Modules and Extensions</h2>
 <p>Omeka S allows for the integration of modules that extend the platform’s functionality. Common modules include:</p>
 <ul>
@@ -256,6 +255,7 @@
 </li>
 <li><strong>Verify:</strong> Test the form to ensure it functions correctly and that messages are received. Ours is already functioning, but feel free to remove and redownload using the above steps if anything ever goes wrong with module ops. </li>
 </ul>
+<hr />
 <h2 id="themes">Themes</h2>
 <p>Themes control the visual appearance of your Omeka S site. They can be customized to align with your branding and design preferences.</p>
 <h4 id="changing-themes">Changing Themes</h4>
@@ -264,12 +264,12 @@
 <li><strong>Select a Theme:</strong> Choose from available themes or upload a custom theme.</li>
 <li><strong>Activate Theme:</strong> Click "Activate" to apply the theme to your site.</li>
 </ol>
-<h3 id="backup-and-security">Backup and Security</h3>
+<h4 id="backup-and-security">Backup and Security</h4>
 <ul>
 <li>Regularly back up your database and files to prevent data loss.</li>
 <li>Implement security best practices, such as using strong passwords and updating software regularly.</li>
 </ul>
-<h3 id="getting-help">Getting Help</h3>
+<h4 id="getting-help">Getting Help</h4>
 <p>For additional assistance, refer to the <a href="https://omeka.org/s/docs/user-manual">Omeka S Documentation</a> or seek help from the <a href="https://forum.omeka.org/">community forums</a>.</p>
 <p>A wonderful resource that was <a href="github.com/lekhasapers">my</a> personal Omeka bible was the Yale University Archives <a href="https://docs.google.com/document/d/1SeHBTbae9Vy685ENqmGGENyf6H65pgDo0QsXo1rcWMQ/edit?usp=sharing">Study Guide</a>. Use this resource frequently! </p>
 <p>By following these guidelines, you can effectively manage and maintain your Omeka S website, ensuring a seamless experience for both administrators and users.</p></div>

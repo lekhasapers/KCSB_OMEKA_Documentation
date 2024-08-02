@@ -112,16 +112,28 @@
 
 <h1 id="glossary">Glossary</h1>
 <hr />
+<h3 id="api">API</h3>
+<p>An Application Programming Interface (API) is a set of tools and protocols for building software and applications. Omeka S provides an API to allow developers to interact with and extend the platform programmatically.</p>
 <h3 id="archive">Archive</h3>
 <p>A collection of historical records and documents that are preserved for research, historical, or cultural purposes. In Omeka, an archive can be digital, consisting of digitized or born-digital content.</p>
 <h3 id="collection">Collection</h3>
 <p>A group of related items within Omeka that are organized under a specific theme or category. Collections help users navigate and discover content more efficiently.</p>
+<h3 id="cron-job">Cron Job</h3>
+<p>A cron job is a scheduled task on Unix-like operating systems. It allows users to schedule scripts or commands to run automatically at specified times and intervals. Cron jobs are often used for automating repetitive tasks such as backups, updates, and system maintenance.</p>
+<h3 id="csv-import">CSV Import</h3>
+<p>A module or plugin that allows users to upload items in bulk using CSV (Comma-Separated Values) files. This feature simplifies the process of adding large numbers of items and metadata to Omeka.</p>
+<h3 id="digital-collection">Digital Collection</h3>
+<p>A curated set of digital items, often organized around a specific theme, subject, or purpose. Digital collections in Omeka can include text, images, audio, and video content.</p>
 <h3 id="dublin-core">Dublin Core</h3>
 <p>A set of metadata elements used to describe digital resources. Omeka uses Dublin Core as its default metadata schema, which includes fields like Title, Subject, Description, Creator, and Date.</p>
 <h3 id="exhibit">Exhibit</h3>
 <p>A curated presentation of items and collections in Omeka, designed to tell a story or provide insight into a particular topic. Exhibits can include text, images, and multimedia content to enhance the user's experience.</p>
 <h3 id="item">Item</h3>
 <p>A single piece of content in Omeka, such as a photograph, document, video, or audio file. Each item can be described using metadata fields and assigned to collections or exhibits.</p>
+<h3 id="json-ld">JSON-LD</h3>
+<p>A lightweight data interchange format used to structure linked data in Omeka S. JSON-LD (JavaScript Object Notation for Linked Data) is used to represent complex metadata relationships.</p>
+<h3 id="linked-data">Linked Data</h3>
+<p>A method of connecting and sharing structured data on the web, allowing for improved interoperability and discoverability. Omeka S supports linked data principles, enabling richer metadata connections.</p>
 <h3 id="metadata">Metadata</h3>
 <p>Information that describes a digital resource, such as title, creator, date, and format. Metadata helps users find and understand the context of digital items within Omeka.</p>
 <h3 id="module">Module</h3>
@@ -134,20 +146,54 @@
 <p>An extension for Omeka Classic that adds additional features and capabilities, such as enhanced search, batch processing, or integration with other platforms.</p>
 <h3 id="resource-template">Resource Template</h3>
 <p>In Omeka S, a predefined set of metadata fields used to create items with consistent descriptions. Resource templates help standardize data entry across collections and sites.</p>
+<h3 id="ssh-key">SSH Key</h3>
+<p>An SSH key is a pair of cryptographic keys used to authenticate and secure communication between computers over a network. The keys consist of a private key (kept secret) and a public key (shared with servers), providing a secure method of logging into a server remotely without a password.</p>
+<h4 id="how-to-create-an-ssh-key">How to Create an SSH Key:</h4>
+<ol>
+<li>
+<p><strong>Open a Terminal</strong>:
+   Open a terminal on your local machine.</p>
+</li>
+<li>
+<p><strong>Generate SSH Key</strong>:
+   Use the following command to generate a new SSH key pair:</p>
+</li>
+</ol>
+<p><code>sh
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code></p>
+<p>Replace <code>"your_email@example.com"</code> with your email address.</p>
+<ol>
+<li>
+<p><strong>Save the Key</strong>:
+   When prompted, press <code>Enter</code> to save the key in the default location (<code>~/.ssh/id_rsa</code>) or specify a different location.</p>
+</li>
+<li>
+<p><strong>Set a Passphrase</strong>:
+   Optionally, enter a passphrase for added security.</p>
+</li>
+<li>
+<p><strong>Add SSH Key to SSH Agent</strong>:
+   Start the SSH agent and add your SSH private key:</p>
+</li>
+</ol>
+<p><code>sh
+   eval "$(ssh-agent -s)"
+   ssh-add ~/.ssh/id_rsa</code></p>
+<ol>
+<li><strong>Copy Public Key to Clipboard</strong>:
+   Use the following command to copy your public key to the clipboard:</li>
+</ol>
+<p><code>sh
+   pbcopy &lt; ~/.ssh/id_rsa.pub</code></p>
+<p>If <code>pbcopy</code> is not available, you can manually copy the key from the <code>~/.ssh/id_rsa.pub</code> file.</p>
+<ol>
+<li><strong>Add Public Key to Server</strong>:
+   Add your SSH public key to the <code>~/.ssh/authorized_keys</code> file on the server you want to access.</li>
+</ol>
 <h3 id="theme">Theme</h3>
 <p>The visual design and layout of an Omeka site. Themes determine how content is displayed to users and can be customized or developed to fit the branding of an organization.</p>
 <h3 id="user-role">User Role</h3>
 <p>The permissions and access levels assigned to users within Omeka. Common roles include Administrator, Editor, and Viewer, each with different capabilities for managing content and settings.</p>
-<h3 id="csv-import">CSV Import</h3>
-<p>A module or plugin that allows users to upload items in bulk using CSV (Comma-Separated Values) files. This feature simplifies the process of adding large numbers of items and metadata to Omeka.</p>
-<h3 id="linked-data">Linked Data</h3>
-<p>A method of connecting and sharing structured data on the web, allowing for improved interoperability and discoverability. Omeka S supports linked data principles, enabling richer metadata connections.</p>
-<h3 id="digital-collection">Digital Collection</h3>
-<p>A curated set of digital items, often organized around a specific theme, subject, or purpose. Digital collections in Omeka can include text, images, audio, and video content.</p>
-<h3 id="json-ld">JSON-LD</h3>
-<p>A lightweight data interchange format used to structure linked data in Omeka S. JSON-LD (JavaScript Object Notation for Linked Data) is used to represent complex metadata relationships.</p>
-<h3 id="api">API</h3>
-<p>An Application Programming Interface (API) is a set of tools and protocols for building software and applications. Omeka S provides an API to allow developers to interact with and extend the platform programmatically.</p>
 <hr />
 <h2 id="quick-links">Quick Links</h2>
 <p>For additional assistance, refer to the following resources:</p>
