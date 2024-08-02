@@ -15,7 +15,7 @@
         <link href="../css/solid.min.css" rel="stylesheet">
         <link href="../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/mono-blue.min.css" >
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/docco.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
@@ -53,23 +53,13 @@
                                 <a href="../user-guide/" class="nav-link">User Guide</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../maintenance/" class="nav-link">Maintenance and Troubleshooting</a>
+                                <a href="../maintenance/" class="nav-link">Maintenance</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../faq/" class="nav-link">FAQ</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Appendices</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../appendices.md#glossary" class="dropdown-item">Glossary</a>
-</li>
-                                    
-<li>
-    <a href="../appendices.md#additional-resources" class="dropdown-item">Additional Resources</a>
-</li>
-                                </ul>
+                            <li class="nav-item">
+                                <a href="../appendices/" class="nav-link">Appendix</a>
                             </li>
                         </ul>
 
@@ -109,14 +99,6 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#system-requirements" class="nav-link">System Requirements</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#server-requirements" class="nav-link">Server Requirements</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#software-dependencies" class="nav-link">Software Dependencies</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -126,7 +108,7 @@
 
 <h1 id="system-requirements">System Requirements</h1>
 <p>To ensure the Omeka S platform operates efficiently at 91.9 KCSB FM, it is essential to meet the following system requirements. These requirements cover both the server environment and required software dependencies.</p>
-<h2 id="server-requirements">Server Requirements</h2>
+<h3 id="server-requirements">Server Requirements</h3>
 <p><strong>Operating System:</strong>
 - <a href="https://elementary.io/">Elementary OS</a></p>
 <p><strong>Hardware:</strong></p>
@@ -136,18 +118,18 @@
 <li><strong>Storage:</strong> 20GB+ Disk Space</li>
 <li><strong>Network:</strong> Reliable internet connection</li>
 </ul>
-<h2 id="software-dependencies">Software Dependencies</h2>
+<h3 id="software-dependencies">Software Dependencies</h3>
 <p>Omeka S is run with a LAMP stack backend architecture. The software requirements are detailed below:</p>
-<h3 id="linux">Linux</h3>
+<h4 id="linux">Linux</h4>
 <ul>
 <li><strong>Elementary OS (Ubuntu):</strong> Ensure that your system is up-to-date to avoid security vulnerabilities and compatibility issues.</li>
 </ul>
-<h3 id="apache">Apache</h3>
+<h4 id="apache">Apache</h4>
 <ul>
 <li><strong>Apache HTTP Server 2.4 or higher</strong></li>
 <li>Ensure <code>mod_rewrite</code> is enabled</li>
 </ul>
-<h3 id="mysql">MySQL</h3>
+<h4 id="mysql">MySQL</h4>
 <ul>
 <li><strong>MySQL 5.7 or higher or MariaDB 10.1 or higher</strong></li>
 <li>Recommended: InnoDB storage engine for tables to increase efficiency and provide foreign key support</li>
@@ -156,7 +138,7 @@
     ALTER DATABASE your_database_name CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;</code></li>
 <li>MySQL default collation/character set is generally <code>utf8mb4</code> and <code>utf8mb4_0900_ai_ci</code>, but double-check to ensure.</li>
 </ul>
-<h3 id="php">PHP</h3>
+<h4 id="php">PHP</h4>
 <ul>
 <li><strong>PHP 7.4 or higher</strong></li>
 <li>Required PHP extensions: <code>PDO</code>, <code>pdo_mysql</code>, <code>mysqli</code>, <code>json</code>, <code>mbstring</code>, <code>xml</code>, <code>dom</code>, <code>simplexml</code>, <code>fileinfo</code>, <code>curl</code>, <code>gd</code></li>

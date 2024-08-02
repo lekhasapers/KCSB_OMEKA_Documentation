@@ -8,14 +8,14 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Appendices - Omeka-S Documentation</title>
+        <title>Appendix - Omeka-S Documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/fontawesome.min.css" rel="stylesheet">
         <link href="../css/brands.min.css" rel="stylesheet">
         <link href="../css/solid.min.css" rel="stylesheet">
         <link href="../css/v4-font-face.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/mono-blue.min.css" >
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/docco.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
@@ -53,23 +53,13 @@
                                 <a href="../user-guide/" class="nav-link">User Guide</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../maintenance/" class="nav-link">Maintenance and Troubleshooting</a>
+                                <a href="../maintenance/" class="nav-link">Maintenance</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../faq/" class="nav-link">FAQ</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Appendices</a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../appendices.md#glossary" class="dropdown-item">Glossary</a>
-</li>
-                                    
-<li>
-    <a href="../appendices.md#additional-resources" class="dropdown-item">Additional Resources</a>
-</li>
-                                </ul>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Appendix</a>
                             </li>
                         </ul>
 
@@ -79,6 +69,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../faq/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -96,12 +96,74 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#glossary" class="nav-link">Glossary</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#quick-links" class="nav-link">Quick Links</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="glossary">Glossary</h1>
+<hr />
+<h3 id="archive">Archive</h3>
+<p>A collection of historical records and documents that are preserved for research, historical, or cultural purposes. In Omeka, an archive can be digital, consisting of digitized or born-digital content.</p>
+<h3 id="collection">Collection</h3>
+<p>A group of related items within Omeka that are organized under a specific theme or category. Collections help users navigate and discover content more efficiently.</p>
+<h3 id="dublin-core">Dublin Core</h3>
+<p>A set of metadata elements used to describe digital resources. Omeka uses Dublin Core as its default metadata schema, which includes fields like Title, Subject, Description, Creator, and Date.</p>
+<h3 id="exhibit">Exhibit</h3>
+<p>A curated presentation of items and collections in Omeka, designed to tell a story or provide insight into a particular topic. Exhibits can include text, images, and multimedia content to enhance the user's experience.</p>
+<h3 id="item">Item</h3>
+<p>A single piece of content in Omeka, such as a photograph, document, video, or audio file. Each item can be described using metadata fields and assigned to collections or exhibits.</p>
+<h3 id="metadata">Metadata</h3>
+<p>Information that describes a digital resource, such as title, creator, date, and format. Metadata helps users find and understand the context of digital items within Omeka.</p>
+<h3 id="module">Module</h3>
+<p>A software component that adds specific functionality to Omeka S, such as data import/export, user authentication, or visual customization. Modules can be installed and configured through the Omeka admin dashboard.</p>
+<h3 id="omeka-classic">Omeka Classic</h3>
+<p>The original version of Omeka, designed for small to medium-sized digital collections. It offers basic features for item management, collection organization, and exhibit creation.</p>
+<h3 id="omeka-s">Omeka S</h3>
+<p>A more scalable and flexible version of Omeka, designed for larger institutions with multiple sites and collections. Omeka S supports linked data, advanced metadata schemas, and custom themes.</p>
+<h3 id="plugin">Plugin</h3>
+<p>An extension for Omeka Classic that adds additional features and capabilities, such as enhanced search, batch processing, or integration with other platforms.</p>
+<h3 id="resource-template">Resource Template</h3>
+<p>In Omeka S, a predefined set of metadata fields used to create items with consistent descriptions. Resource templates help standardize data entry across collections and sites.</p>
+<h3 id="theme">Theme</h3>
+<p>The visual design and layout of an Omeka site. Themes determine how content is displayed to users and can be customized or developed to fit the branding of an organization.</p>
+<h3 id="user-role">User Role</h3>
+<p>The permissions and access levels assigned to users within Omeka. Common roles include Administrator, Editor, and Viewer, each with different capabilities for managing content and settings.</p>
+<h3 id="csv-import">CSV Import</h3>
+<p>A module or plugin that allows users to upload items in bulk using CSV (Comma-Separated Values) files. This feature simplifies the process of adding large numbers of items and metadata to Omeka.</p>
+<h3 id="linked-data">Linked Data</h3>
+<p>A method of connecting and sharing structured data on the web, allowing for improved interoperability and discoverability. Omeka S supports linked data principles, enabling richer metadata connections.</p>
+<h3 id="digital-collection">Digital Collection</h3>
+<p>A curated set of digital items, often organized around a specific theme, subject, or purpose. Digital collections in Omeka can include text, images, audio, and video content.</p>
+<h3 id="json-ld">JSON-LD</h3>
+<p>A lightweight data interchange format used to structure linked data in Omeka S. JSON-LD (JavaScript Object Notation for Linked Data) is used to represent complex metadata relationships.</p>
+<h3 id="api">API</h3>
+<p>An Application Programming Interface (API) is a set of tools and protocols for building software and applications. Omeka S provides an API to allow developers to interact with and extend the platform programmatically.</p>
+<hr />
+<h2 id="quick-links">Quick Links</h2>
+<p>For additional assistance, refer to the following resources:</p>
+<ul>
+<li>
+<p><strong><a href="https://omeka.org/s/docs/user-manual/">Omeka S Documentation</a>:</strong> Access comprehensive user manuals and guides to help you navigate and make the most of Omeka S.</p>
+</li>
+<li>
+<p><strong><a href="https://forum.omeka.org/">Omeka Community Forums</a>:</strong> Engage with the community,  ask questions,  and share knowledge about Omeka S. This is a great place to seek help from fellow users and experts.</p>
+</li>
+<li>
+<p><strong><a href="https://docs.google.com/document/d/1SeHBTbae9Vy685ENqmGGENyf6H65pgDo0QsXo1rcWMQ/edit?tab=t.0#heading=h.2ycpukh4lmq2">Project Documentation on Google Docs</a>:</strong> View detailed project documentation, including specific instructions and information relevant to your project.</p>
+</li>
+</ul>
+<hr />
+<p>These resources provide valuable information and support to help you effectively use and troubleshoot Omeka S. Thanks for reading.</p></div>
             </div>
         </div>
 
