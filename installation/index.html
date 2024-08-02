@@ -227,6 +227,7 @@
 <li>Adjust PHP settings for better performance:
   <code>sh
   sudo nano /etc/php/7.4/apache2/php.ini</code></li>
+<li>This subsequent part is very important and something that I had trouble with. Don't forget to do this.</li>
 <li>Suggested adjustments:<ul>
 <li><code>memory_limit = 256M</code></li>
 <li><code>upload_max_filesize = 64M</code></li>
@@ -276,11 +277,11 @@
 <li>Create a new virtual host configuration:</li>
 </ul>
 <pre><code class="language-sh">  sudo nano /etc/apache2/sites-available/omeka-s.conf
-  ```
-
-- Add the following content to the config file:
- ```apache
-&lt;VirtualHost *:80&gt;
+</code></pre>
+<ul>
+<li>Add the following content to the config file:</li>
+</ul>
+<pre><code class="language-apache">&lt;VirtualHost *:80&gt;
     ServerAdmin webmaster@localhost
     DocumentRoot /var/www/html/omeka-s
 
@@ -343,6 +344,7 @@
 </ul>
 <h3 id="17-set-up-cron-jobs-for-maintenance-optional">17. Set Up Cron Jobs for Maintenance (Optional)</h3>
 <ul>
+<li>I didn't do this, but in retrospect would be better to complete</li>
 <li>
 <p>Set up cron jobs for regular maintenance tasks:
   <code>sh
