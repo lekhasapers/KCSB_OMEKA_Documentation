@@ -17,6 +17,7 @@
         <link href="../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/docco.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../css/custom.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     </head>
@@ -179,31 +180,21 @@
 </ul>
 <h3 id="step-1-backing-up-omeka-s-files">Step 1: Backing Up Omeka S Files</h3>
 <h4 id="manual-backup">Manual Backup</h4>
-<ol>
-<li><strong>Connect to Your Server</strong>: Use SSH to connect to your server. I've been using 'archives@128.111.126.136', but I'm not sure if you're on the same computer, so you may have to set that up on your own. </li>
-</ol>
+<p><strong>Connect to Your Server</strong>: Use SSH to connect to your server. I've been using 'archives@128.111.126.136', but I'm not sure if you're on the same computer, so you may have to set that up on your own. </p>
 <p><code>sh
    ssh username@your-server-ip</code></p>
-<ol>
-<li><strong>Navigate to the Omeka S Directory</strong>: Locate the directory where Omeka S is installed.</li>
-</ol>
+<p><strong>Navigate to the Omeka S Directory</strong>: Locate the directory where Omeka S is installed.</p>
 <p><code>sh
    cd /var/www/html/omeka-s</code></p>
-<ol>
-<li><strong>Create a Compressed Archive</strong>: Use the <code>tar</code> command to create a compressed archive of the Omeka S directory.</li>
-</ol>
+<p><strong>Create a Compressed Archive</strong>: Use the <code>tar</code> command to create a compressed archive of the Omeka S directory.</p>
 <p><code>sh
    tar -czvf omeka-s-backup-$(date +%F).tar.gz .</code></p>
 <p>This command creates a tar.gz file named with the current date.</p>
-<ol>
-<li><strong>Move the Backup File</strong>: Move the backup file to a safe location.</li>
-</ol>
+<p><strong>Move the Backup File</strong>: Move the backup file to a safe location.</p>
 <p><code>sh
    mv omeka-s-backup-$(date +%F).tar.gz /path/to/backup/location</code></p>
 <h4 id="automated-backup-using-a-cron-job">Automated Backup (Using a Cron Job)</h4>
-<ol>
-<li><strong>Create a Backup Script</strong>: Create a shell script to automate the backup process.</li>
-</ol>
+<p><strong>Create a Backup Script</strong>: Create a shell script to automate the backup process.</p>
 <p><code>sh
    nano backup-omeka-s.sh</code></p>
 <p>Add the following content to the script:</p>
@@ -214,14 +205,10 @@
    TIMESTAMP=$(date +%F)
    tar -czvf $BACKUP_DIR/omeka-s-backup-$TIMESTAMP.tar.gz -C $OMEKA_DIR .</code></p>
 <p>Save and close the file.</p>
-<ol>
-<li><strong>Make the Script Executable</strong>:</li>
-</ol>
+<p><strong>Make the Script Executable</strong>:</p>
 <p><code>sh
    chmod +x backup-omeka-s.sh</code></p>
-<ol>
-<li><strong>Create a Cron Job</strong>: Open the crontab editor.</li>
-</ol>
+<p><strong>Create a Cron Job</strong>: Open the crontab editor.</p>
 <p><code>sh
    crontab -e</code></p>
 <p>Add the following line to schedule the backup script to run daily at midnight:</p>
@@ -229,21 +216,15 @@
    0 0 * * * /path/to/backup-omeka-s.sh</code></p>
 <h3 id="step-2-backing-up-the-database">Step 2: Backing Up the Database</h3>
 <h4 id="manual-backup_1">Manual Backup</h4>
-<ol>
-<li><strong>Dump the Database</strong>: Use the <code>mysqldump</code> command to create a backup of the Omeka S database.</li>
-</ol>
+<p><strong>Dump the Database</strong>: Use the <code>mysqldump</code> command to create a backup of the Omeka S database.</p>
 <p><code>sh
    mysqldump -u username -p omeka_database &gt; omeka-db-backup-$(date +%F).sql</code></p>
 <p>Enter your MySQL password when prompted.</p>
-<ol>
-<li><strong>Move the Backup File</strong>: Move the SQL file to a safe location.</li>
-</ol>
+<p><strong>Move the Backup File</strong>: Move the SQL file to a safe location.</p>
 <p><code>sh
    mv omeka-db-backup-$(date +%F).sql /path/to/backup/location</code></p>
 <h4 id="automated-backup-using-a-cron-job_1">Automated Backup (Using a Cron Job)</h4>
-<ol>
-<li><strong>Create a Database Backup Script</strong>: Create a shell script to automate the database backup process.</li>
-</ol>
+<p><strong>Create a Database Backup Script</strong>: Create a shell script to automate the database backup process.</p>
 <p><code>sh
    nano backup-omeka-db.sh</code></p>
 <p>Add the following content to the script:</p>
@@ -256,28 +237,20 @@
    TIMESTAMP=$(date +%F)
    mysqldump -u $DB_USER -p$DB_PASS $DB_NAME &gt; $BACKUP_DIR/omeka-db-backup-$TIMESTAMP.sql</code></p>
 <p>Save and close the file.</p>
-<ol>
-<li><strong>Make the Script Executable</strong>:</li>
-</ol>
+<p><strong>Make the Script Executable</strong>:</p>
 <p><code>sh
    chmod +x backup-omeka-db.sh</code></p>
-<ol>
-<li><strong>Create a Cron Job</strong>: Open the crontab editor.</li>
-</ol>
+<p><strong>Create a Cron Job</strong>: Open the crontab editor.</p>
 <p><code>sh
    crontab -e</code></p>
 <p>Add the following line to schedule the database backup script to run daily at 1 AM:</p>
 <p><code>sh
    0 1 * * * /path/to/backup-omeka-db.sh</code></p>
 <h3 id="step-3-verifying-backups">Step 3: Verifying Backups</h3>
-<ol>
-<li><strong>List Backup Files</strong>: Check the backup location to ensure the files are created.</li>
-</ol>
+<p><strong>List Backup Files</strong>: Check the backup location to ensure the files are created.</p>
 <p><code>sh
    ls /path/to/backup/location</code></p>
-<ol>
-<li><strong>Test Restoration</strong>: Periodically test the restoration process to ensure backups are valid and complete.</li>
-</ol>
+<p><strong>Test Restoration</strong>: Periodically test the restoration process to ensure backups are valid and complete.</p>
 <p>Regularly backing up your Omeka S installation is critical for data integrity and disaster recovery. By following the steps outlined in this documentation, you can ensure that both your files and database are safely backed up and can be restored if needed.</p></div>
             </div>
         </div>

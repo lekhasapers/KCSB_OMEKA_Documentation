@@ -1,0 +1,33 @@
+/* Ensure ordered lists use decimal numbering */
+ol {
+    list-style-type: decimal;
+    margin-left: 1.5em;
+}
+
+/* Add spacing between headers and paragraphs */
+h1 + p,
+h1 + h6 {
+    margin-top: 20px;
+}
+
+/* Specific styling for the subheaders to adjust line spacing */
+h6 {
+    margin-bottom: 0; 
+    font-weight: normal; 
+}
+
+
+body {
+    line-height: 1.6; 
+    font-family: Arial, sans-serif; 
+}
+
+/* Custom styling for links */
+a {
+    color: #007bff; 
+    text-decoration: none; 
+}
+
+a:hover {
+    text-decoration: underline; 
+}
