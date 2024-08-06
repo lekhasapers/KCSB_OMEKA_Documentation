@@ -27,7 +27,7 @@ ________
 ### Contact Me
 
 If you have any further questions or need assistance, feel free to contact [me](https://www.linkedin.com/in/lekha-sapers-27a215243/) using the form below.
-xs
+
 #### Contact Form
 
 If you have any questions or feedback, feel free to contact me using the form below.
