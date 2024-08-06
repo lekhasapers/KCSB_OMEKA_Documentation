@@ -1,6 +1,6 @@
+
 site_name: Omeka-S Documentation 
 site_description: Documentation for 91.9 KCSB FM 2024-2025
-
 
 nav:
   - Home: index.md
@@ -8,17 +8,12 @@ nav:
   - System Requirements: system-requirements.md
   - Installation: installation.md
   - Configuration: configuration.md
-  - User Guide:
-      - Accessing the Website: user-guide.md#accessing-the-website
-      - User Roles and Permissions: user-guide.md#user-roles-and-permissions
-      - Creating and Managing Content: user-guide.md#creating-and-managing-content
-      - Plugins and Themes: user-guide.md#plugins-and-themes
-  - Maintenance and Troubleshooting: maintenance.md
+  - User Guide: user-guide.md
+  - Maintenance: maintenance.md
   - FAQ: faq.md
-  - Appendices:
-      - Glossary: appendices.md#glossary
-      - Additional Resources: appendices.md#additional-resources
-
+  - Appendix: appendices.md
 theme:
-  name: material
+  name: flatly
 
+extra_css: 
+- css/custom.css

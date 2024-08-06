@@ -3,6 +3,8 @@
 After installing Omeka S on your server, the next step is to configure it properly to ensure optimal performance and security. This segment covers the initial configuration steps, configuring plugins and themes, and customizing the appearance of your Omeka S site.
 
 ## Initial Configuration
+_____________________________
+
 
 ### Database Configuration
 
@@ -23,15 +25,17 @@ You will also be prompted to create an admin user during the installation proces
 - **Email:** Enter a valid email address.
 - **Password:** Create a strong password.
 
-### Site Configuration
+#### Site Configuration
 
 Once the installation is complete, log in to the admin interface using the credentials created in the previous step.
 
 Navigate to **Settings** to configure the basic settings of your Omeka S site, such as site title, site description, and administrative contact information.
+____
 
 ## Configuring Plugins
 
 Plugins extend the functionality of Omeka S. The following details the installation procedures for themes and modules.
+
 
 ### Installing Plugins
 
@@ -55,6 +59,7 @@ Plugins extend the functionality of Omeka S. The following details the installat
 After activation, many plugins will add their own configuration options to the admin interface.
 
 Navigate to the plugin’s configuration page via **Modules > [Plugin Name]** and configure the settings as needed.
+______
 
 ## Configuring Themes
 
@@ -63,7 +68,7 @@ Themes control the appearance of your Omeka S site. Here’s how to install and 
 ### Installing Themes
 
 1. Download the desired theme from the Omeka S themes directory.
-2. Extract the theme archive and upload the theme folder to the `themes` directory in your Omeka S installation path (`/var/www/html/omeka-s/themes`).
+2. Extract the theme archive and upload the theme folder to the `themes` directory in your Omeka S installation path `/var/www/html/omeka-s/themes`.
 3. Ensure the correct file permissions:
    ```sh
    sudo chown -R www-data:www-data /var/www/html/omeka-s/themes/ThemeName
