@@ -14,6 +14,7 @@ nav:
   - Appendix: appendices.md
 theme:
   name: flatly
+  custom_dir: docs/overrides
 
 extra_css: 
 - css/custom.css
