@@ -1,4 +1,4 @@
-# Omeka S and LAMP Stack Dependencies
+# Installation
 
 Running Omeka S on a LAMP backend architecture involves several steps, including installing and configuring each component of the stack and then installing Omeka S itself.
 
@@ -191,8 +191,63 @@ Running Omeka S on a LAMP backend architecture involves several steps, including
   ```
 
 ### 18. Security Considerations
-- Secure MySQL:
-  - Ensure proper security practices are followed, such as securing the MySQL root account and using strong passwords.
+
+Ensuring the security of the MySQL root account is crucial for protecting your database. Below are several recommended security practices:
+
+#### 1. Set a Strong Password
+Always use a strong password for the MySQL root account. A strong password should include a combination of uppercase and lowercase letters, numbers, and special characters. Avoid using default or weak passwords.
+
+**Example Command:**
+```
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'New_Strong_Password';
+```
+
+#### 2. Disable Remote Root Access
+To prevent unauthorized access, restrict the root account to local connections only. This prevents external hosts from connecting directly to the MySQL root account.
+
+**Example Command:**
+```
+UPDATE mysql.user SET Host='localhost' WHERE User='root';
+FLUSH PRIVILEGES;
+```
+
+#### 3. Use the `mysql_secure_installation` Script
+MySQL provides a built-in script that walks you through securing your installation. This includes removing anonymous users, enforcing strong passwords, and more.
+
+**Example Command:**
+```
+sudo mysql_secure_installation
+```
+
+#### 4. Remove Anonymous Users
+Anonymous user accounts can pose a security risk. Ensure they are removed to limit unauthorized access.
+
+**Example Command:**
+```
+DELETE FROM mysql.user WHERE User='';
+FLUSH PRIVILEGES;
+```
+
+#### 5. Remove Remote Root Access (if enabled)
+Root access should be limited to local connections. If remote access is necessary, consider creating a separate user with specific permissions. To ensure root cannot access remotely, use the following command:
+
+**Example Command:**
+```
+DELETE FROM mysql.user WHERE User='root' AND Host != 'localhost';
+FLUSH PRIVILEGES;
+```
+
+#### 6. Grant Minimal Privileges
+For day-to-day operations, avoid using the root account. Instead, create separate users with the minimal privileges required for their tasks.
+
+#### 7. Enable Logging and Monitoring
+Enable MySQL logs to monitor suspicious activities and access attempts. Regularly review logs to identify potential security risks.
+
+#### 8. Use SSL/TLS Encryption
+If remote connections are necessary, configure MySQL to use SSL/TLS to encrypt traffic between clients and the server. This ensures secure communication over the network.
+
+By following these security practices, you can help safeguard your MySQL database and reduce the risk of unauthorized access.
+
 
 ### 19. Backup Procedures
 - Document a simple backup procedure for Omeka S data:
