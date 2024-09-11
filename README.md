@@ -5,7 +5,7 @@ https://lekhasapers.github.io/KCSB_OMEKA_Documentation/
 
 ### About the Project
 
-This documentation site is built using [MkDocs](https://www.mkdocs.org/) with the Flatly theme. It includes customizations for Google Analytics integration and additional CSS for improved styling.
+This site is an extensive technical documentation regarding the installation, configuration and maintenance of 91.9 KCSB FM's OMEKA-S Archival Database. It is built using [MkDocs](https://www.mkdocs.org/) with the Flatly theme. It includes customizations for Google Analytics integration and additional CSS for improved styling.
 
 ### Cloning the Repository
 
