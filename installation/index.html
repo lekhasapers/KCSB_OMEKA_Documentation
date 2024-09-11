@@ -109,7 +109,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#omeka-s-and-lamp-stack-dependencies" class="nav-link">Omeka S and LAMP Stack Dependencies</a>
+            <li class="nav-item" data-bs-level="1"><a href="#installation" class="nav-link">Installation</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -118,7 +118,7 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="omeka-s-and-lamp-stack-dependencies">Omeka S and LAMP Stack Dependencies</h1>
+<h1 id="installation">Installation</h1>
 <p>Running Omeka S on a LAMP backend architecture involves several steps, including installing and configuring each component of the stack and then installing Omeka S itself.</p>
 <h3 id="1-install-elementary-os">1. Install Elementary OS</h3>
 <ul>
@@ -327,10 +327,42 @@
 </li>
 </ul>
 <h3 id="18-security-considerations">18. Security Considerations</h3>
-<ul>
-<li>Secure MySQL:</li>
-<li>Ensure proper security practices are followed, such as securing the MySQL root account and using strong passwords.</li>
-</ul>
+<p>Ensuring the security of the MySQL root account is crucial for protecting your database. Below are several recommended security practices:</p>
+<h4 id="1-set-a-strong-password">1. Set a Strong Password</h4>
+<p>Always use a strong password for the MySQL root account. A strong password should include a combination of uppercase and lowercase letters, numbers, and special characters. Avoid using default or weak passwords.</p>
+<p><strong>Example Command:</strong></p>
+<pre><code>ALTER USER 'root'@'localhost' IDENTIFIED BY 'New_Strong_Password';
+</code></pre>
+<h4 id="2-disable-remote-root-access">2. Disable Remote Root Access</h4>
+<p>To prevent unauthorized access, restrict the root account to local connections only. This prevents external hosts from connecting directly to the MySQL root account.</p>
+<p><strong>Example Command:</strong></p>
+<pre><code>UPDATE mysql.user SET Host='localhost' WHERE User='root';
+FLUSH PRIVILEGES;
+</code></pre>
+<h4 id="3-use-the-mysql_secure_installation-script">3. Use the <code>mysql_secure_installation</code> Script</h4>
+<p>MySQL provides a built-in script that walks you through securing your installation. This includes removing anonymous users, enforcing strong passwords, and more.</p>
+<p><strong>Example Command:</strong></p>
+<pre><code>sudo mysql_secure_installation
+</code></pre>
+<h4 id="4-remove-anonymous-users">4. Remove Anonymous Users</h4>
+<p>Anonymous user accounts can pose a security risk. Ensure they are removed to limit unauthorized access.</p>
+<p><strong>Example Command:</strong></p>
+<pre><code>DELETE FROM mysql.user WHERE User='';
+FLUSH PRIVILEGES;
+</code></pre>
+<h4 id="5-remove-remote-root-access-if-enabled">5. Remove Remote Root Access (if enabled)</h4>
+<p>Root access should be limited to local connections. If remote access is necessary, consider creating a separate user with specific permissions. To ensure root cannot access remotely, use the following command:</p>
+<p><strong>Example Command:</strong></p>
+<pre><code>DELETE FROM mysql.user WHERE User='root' AND Host != 'localhost';
+FLUSH PRIVILEGES;
+</code></pre>
+<h4 id="6-grant-minimal-privileges">6. Grant Minimal Privileges</h4>
+<p>For day-to-day operations, avoid using the root account. Instead, create separate users with the minimal privileges required for their tasks.</p>
+<h4 id="7-enable-logging-and-monitoring">7. Enable Logging and Monitoring</h4>
+<p>Enable MySQL logs to monitor suspicious activities and access attempts. Regularly review logs to identify potential security risks.</p>
+<h4 id="8-use-ssltls-encryption">8. Use SSL/TLS Encryption</h4>
+<p>If remote connections are necessary, configure MySQL to use SSL/TLS to encrypt traffic between clients and the server. This ensures secure communication over the network.</p>
+<p>By following these security practices, you can help safeguard your MySQL database and reduce the risk of unauthorized access.</p>
 <h3 id="19-backup-procedures">19. Backup Procedures</h3>
 <ul>
 <li>Document a simple backup procedure for Omeka S data:
